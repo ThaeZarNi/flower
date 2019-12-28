@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/flower_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/tulip"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/flower_image"
+        android:id="@+id/txtN"
+        android:text="@string/txtN"
+        android:textSize="@dimen/header_size"
+        android:textStyle="bold"
+        android:textColor="@color/txtColor"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtH"
+        app:layout_constraintTop_toBottomOf="@+id/txtN"
+        android:text="@string/txtH"
+        android:textSize="@dimen/header_size"
+        android:textColor="@color/txtColor"
+        app:layout_constraintLeft_toLeftOf="@+id/txtN"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:layout_width="@dimen/dimen_24dp"
+        android:layout_height="@dimen/dimen_24dp"
+        android:id="@+id/ic_star"
+        app:layout_constraintTop_toBottomOf="@id/txtH"
+        app:layout_constraintLeft_toLeftOf="@id/txtN"
+        android:src="@drawable/ic_star"
+        android:layout_marginTop="@dimen/dimen_24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtC"
+        android:text="@string/txtC"
+        app:layout_constraintLeft_toRightOf="@id/ic_star"
+        app:layout_constraintTop_toBottomOf="@id/txtH"
+        android:layout_marginTop="@dimen/dimen_24dp"
+        android:textSize="@dimen/choice_size"
+        android:textColor="@color/choColor"/>
+
+    <TextView
+        android:id="@+id/txtD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:text="@string/txtD"
+        android:textColor="@color/txtColor"
+        android:textSize="@dimen/choice_size"
+        app:layout_constraintLeft_toLeftOf="@id/txtN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_star" />
+
+    <TextView
+        android:id="@+id/txtP"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$ 99.9"
+        app:layout_constraintLeft_toLeftOf="@id/txtN"
+        app:layout_constraintTop_toBottomOf="@id/txtD"
+        android:textColor="@color/txtColor"
+        android:textSize="@dimen/header_size"
+        android:layout_marginBottom="@dimen/dimen_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        />
+    <Button
+        android:id="@+id/txtB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      app:layout_constraintBaseline_toBaselineOf="@id/txtP"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/rounded_buttom"
+        android:textColor="@android:color/white"
+        android:paddingRight="@dimen/dimen_12dp"
+        android:paddingLeft="@dimen/dimen_12dp"
+        android:layout_marginRight="@dimen/dimen_12dp"
+        android:text="@string/txtB"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
